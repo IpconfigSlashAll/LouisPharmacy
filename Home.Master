@@ -1,0 +1,107 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.Master.cs" Inherits="Project.Home" %>
+
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="Styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        div {
+            text-align: center;
+            justify-content: center;
+            margin:0;
+            padding:0;
+        }
+
+        .a {
+            font-size: 40px;
+            cursor: pointer;
+            padding-left: 10px;
+            position: absolute;
+            left: 20px;
+        }
+
+        .b {
+            text-align: left;
+        }
+    </style>
+    <title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder></title>
+</head>
+<body class="text-light bg-dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid" id="TESTING" runat="server">
+    <a class="navbar-brand" href="Main.aspx">
+        <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/228BE6/plus-math.png" alt="Blue Cross" class="d-inline-block align-text-top">
+        Louis' Pharmacy
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" ID="View" runat="server">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            View
+          </a>
+          <ul class="dropdown-menu" runat="server">
+            <li><a class="dropdown-item" href="frmViewPatient.aspx">Patient</a></li>
+            <li><a class="dropdown-item" href="frmViewDoctor.aspx">Doctor</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="frmViewRefill.aspx">Refill</a></li>
+            <li><a class="dropdown-item" href="frmViewPrescription.aspx">Prescription</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown" ID="Add" runat="server">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Add
+          </a>
+          <ul class="dropdown-menu" runat="server">
+            <li><a class="dropdown-item" href="frmAddPatient.aspx">Patient</a></li>
+            <li><a class="dropdown-item" href="frmAddDoctor.aspx">Doctor</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="frmAddRefill.aspx">Refill</a></li>
+            <li><a class="dropdown-item" href="frmAddPrescription.aspx">Prescription</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown" ID="Other" runat="server">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Other
+            </a>
+            <ul class="dropdown-menu" runat="server">
+                <li><a class="dropdown-item" href="frmPickUp.aspx">Pick Up Prescription</a></li>
+            </ul>
+        </li>
+      </ul>
+
+<%--        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <a class="navbar-brand" href="frmLogin.aspx">
+        Login
+        </a>
+        </div>--%>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <a href="frmLogin.aspx">
+            <button type="button" class="btn btn2 btn-outline-primary" href="frmLogin.aspx">Login</button>  
+            </a>
+        </div>
+
+    </div>
+  </div>
+</nav>
+    <div>
+        <span style="font-size:40px">Louis' </span>
+        <span style="font-size:40px; color:#228be6">Pharmacy</span>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+        <footer class="bg-body-secondary">
+            <p>All rights Reserved by Louis Pharmacy copyright &copy; 2025 <br />                
+                <asp:HyperLink ID="HyperLink2" runat="server" href="https://www.amazon.com/gp/help/customer/display.html?nodeId=G4VAP7GB6Q48F6CD">Terms of Use.</asp:HyperLink> ||
+                <asp:HyperLink ID="HyperLink1" runat="server" href="https://www.amazon.com/gp/help/customer/display.html?nodeId=GVUKSDLFD49P9GM2">Privacy Notice.</asp:HyperLink>
+            </p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

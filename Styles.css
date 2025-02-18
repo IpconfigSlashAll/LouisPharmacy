@@ -1,0 +1,110 @@
+﻿.TXT {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.TXT span{
+    width: 100px;
+    margin-right:10px;
+    font-weight:bold;
+    }
+.TXT input[type="text"] {
+    flex-grow:0;
+    }
+table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: gainsboro;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-y: auto;
+    padding-bottom: 100px;
+}
+
+/* footer position*/
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    text-align: center;
+}
+
+.CenterA {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* hamburger bar */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.25s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+       padding: 2px 2px 2px 10px;
+       text-decoration: none;
+       font-size: 25px;
+       color: #818181;
+       display: block;
+       transition: 0.1s;
+}
+
+.sidenav a:hover {
+       color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 50px;
+        margin-left: 50px;
+}
+    /* END */
+
+/* button size*/
+.btn{
+    width:150px;
+    height:50px;
+}
+
+
+/* Login button position */
+.btn2 {
+    margin-top: 2px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.Required{
+    color:red;
+    text-align:left;  
+}
+
+.RED{
+    color:red;
+}
+
+.header
+{
+    padding:10px;
+}
